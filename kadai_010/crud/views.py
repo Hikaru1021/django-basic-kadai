@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView,DetailView
 from .models import Product
 
 class TopView(TemplateView):
@@ -7,4 +7,7 @@ class TopView(TemplateView):
 
 class ProductListView(ListView):
     model = Product
-    paginate_by = 3
+
+class ProductDetail(DetailView):
+    model = Product
+    template_name = "crud/product_detail.html"
