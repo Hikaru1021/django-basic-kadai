@@ -18,9 +18,8 @@
      </tr>
      {% endfor %}
  </table>
- <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <br>
-    <a href="{% url 'list' %}">戻る</a>
- </form>
+{% csrf_token %}
+<br>
+<a href="{% url 'list' %}">戻る</a>
+
  {% endblock %}
