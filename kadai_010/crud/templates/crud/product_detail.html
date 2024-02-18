@@ -11,15 +11,16 @@
              <th>価格</th>
          </tr>
      </thead>
-     {% for product in object_list %}
+    <tbody>
      <tr>
          <td>{{ product.name }}</td>
          <td>{{ product.price }} 円</td>
      </tr>
-     {% endfor %}
+    </tbody>
  </table>
-{% csrf_token %}
-<br>
-<a href="{% url 'list' %}">戻る</a>
-
+ <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <br>
+    <a href="{% url 'list' %}">戻る</a>
+</form>
  {% endblock %}
