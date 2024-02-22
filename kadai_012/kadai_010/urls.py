@@ -28,3 +28,5 @@ urlpatterns = [
     path('crud/delete/<int:pk>', views.ProductDeleteView.as_view(), name="delete"),
     path('crud/detail/<int:pk>', views.ProductDetailView.as_view(), name="detail"),
 ]
+if settings.DEBUG:
+     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
