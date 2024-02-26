@@ -9,6 +9,7 @@ class TopView(TemplateView):
 
 class ProductListView(ListView):
     model = Product
+    paginate_by = 3
 
 class ProductDetailView(DetailView):
     model = Product
